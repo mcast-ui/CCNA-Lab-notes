@@ -14,9 +14,9 @@ R1> enable
 R1# show ip interface brief
 Interface              IP-Address      OK? Method Status                Protocol 
 GigabitEthernet0/0     unassigned      YES NVRAM  up                    up 
-**GigabitEthernet0/0.10  10.0.0.62       YES manual up                    up 
+GigabitEthernet0/0.10  10.0.0.62       YES manual up                    up 
 GigabitEthernet0/0.20  10.0.0.126      YES manual up                    up 
-GigabitEthernet0/0.30  10.0.0.190      YES manual up                    up** 
+GigabitEthernet0/0.30  10.0.0.190      YES manual up                    up 
 GigabitEthernet0/1     unassigned      YES NVRAM  administratively down down 
 GigabitEthernet0/2     unassigned      YES NVRAM  administratively down down 
 GigabitEthernet0/0/0   1.1.1.2         YES manual up                    up 
@@ -75,7 +75,7 @@ R1(config-if)#no shut
 ```jsx
 R1(config)#do sh ip in br
 Interface              IP-Address      OK? Method Status                Protocol 
-**GigabitEthernet0/0**     10.0.0.194      YES manual **up                    up** 
+GigabitEthernet0/0     10.0.0.194      YES manual up                    up 
 GigabitEthernet0/1     unassigned      YES NVRAM  administratively down down 
 GigabitEthernet0/2     unassigned      YES NVRAM  administratively down down 
 GigabitEthernet0/0/0   1.1.1.2         YES manual up                    up 
@@ -139,7 +139,7 @@ SW2#
 SW2#sh ip int br
 Interface              IP-Address      OK? Method Status                Protocol 
 GigabitEthernet1/0/1   unassigned      YES unset  up                    up 
-**GigabitEthernet1/0/2   10.0.0.193      YES manual up                    up** 
+GigabitEthernet1/0/2   10.0.0.193      YES manual up                    up 
 GigabitEthernet1/0/3   unassigned      YES unset  up                    up 
 GigabitEthernet1/0/4   unassigned      YES unset  up                    up 
 GigabitEthernet1/0/5   unassigned      YES unset  up                    up 
@@ -152,12 +152,12 @@ Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
        * - candidate default, U - per-user static route, o - ODR
        P - periodic downloaded static route
 
-**Gateway of last resort is 10.0.0.194 to network 0.0.0.0**
+Gateway of last resort is 10.0.0.194 to network 0.0.0.0
 
      10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
 C       10.0.0.192/30 is directly connected, GigabitEthernet1/0/2
 L       10.0.0.193/32 is directly connected, GigabitEthernet1/0/2
-**S*   0.0.0.0/0 [1/0] via 10.0.0.194**
+S*   0.0.0.0/0 [1/0] via 10.0.0.194
 ```
 
 ## 2. Configure Switch Virtual Interfaces (SVI) on SW2
